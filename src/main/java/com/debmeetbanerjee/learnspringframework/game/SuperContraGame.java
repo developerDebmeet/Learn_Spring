@@ -1,18 +1,18 @@
 package com.debmeetbanerjee.learnspringframework.game;
 
-public class MarioGame implements GamingConsole{
+public class SuperContraGame implements GamingConsole {
 
     public void up() {
-        System.out.println("Jump");
+        System.out.println("up");
     }
     public void down() {
-        System.out.println("Enter a Hole");
+        System.out.println("sit down");
     }
     public void left() {
         System.out.println("Go Back");
     }
     public void right() {
-        System.out.println("Go Ahead");
+        System.out.println("Shoot a Bullet");
     }
 
 }
