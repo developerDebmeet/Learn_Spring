@@ -28,4 +28,11 @@ POJO : Plain Old Java Object \
 Spring Bean : Any Java Object that is managed by Spring \
     - Spring uses IOC Container [Bean Factory or Application Context] to manage these objects
 
+Spring Dependency Injection Types \
+    - Constructor Based : Dependencies are set by creating the Bean using its Constuctor \
+    - Setter Based : Dependencies are set by calling setter methods on your Beans \
+    - Field : No Setter or Constructor. Dependency is injected using Reflection. 
+
+
+
 
