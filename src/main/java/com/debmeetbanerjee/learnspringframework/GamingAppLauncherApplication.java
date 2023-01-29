@@ -19,3 +19,13 @@ public class GamingAppLauncherApplication {
 
     }
 }
+/*
+* @Primary - A bean will get preference when multiple qualifying beans are present
+* @Qualifier - A specific bean should get autowired [bean name can be used as qualifier]
+* Always think from the perspective of the clas which is using the dependencies
+*
+* If only @Autowired is present : Give me a preferred qualifying bean
+* If @Autowired and @Qualifier present : Give me that specific bean
+*
+* @Qualifier has higher priority than @Primary
+* */
