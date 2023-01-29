@@ -1,20 +1,22 @@
-package com.debmeetbanerjee.learnspringframework;
+package com.debmeetbanerjee.learnspringframework.examples.a0;
 
-import com.debmeetbanerjee.learnspringframework.game.GameRunner;
-import com.debmeetbanerjee.learnspringframework.game.GamingConsole;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Arrays;
+
 @Configuration
-@ComponentScan("com.debmeetbanerjee.learnspringframework.game")
-public class GamingAppLauncherApplication {
+@ComponentScan
+//@ComponentScan("com.debmeetbanerjee.learnspringframework.examples.a1") --> If you want to perform ComponentScan on the
+//same file as the code, no need to mention package, just @ComponentScan is enough
+public class SimpleSpringContextLauncher {
 
     public static void main(String[] args) {
 
-        try (var context = new AnnotationConfigApplicationContext(GamingAppLauncherApplication.class)) {
-            context.getBean(GamingConsole.class).up();
-            context.getBean(GameRunner.class).run();
+        try (var context = new AnnotationConfigApplicationContext(SimpleSpringContextLauncher.class)) {
+            Arrays.stream(context.getBeanDefinitionNames())
+                    .forEach(System.out::println);
         }
 
     }
