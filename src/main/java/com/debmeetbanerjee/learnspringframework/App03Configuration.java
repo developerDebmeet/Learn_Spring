@@ -1,4 +1,4 @@
-package com.debmeetbanerjee.learnspringframework.helloworld;
+package com.debmeetbanerjee.learnspringframework;
 
 import com.debmeetbanerjee.learnspringframework.game.GameRunner;
 import com.debmeetbanerjee.learnspringframework.game.GamingConsole;

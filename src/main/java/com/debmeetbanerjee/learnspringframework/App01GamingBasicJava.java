@@ -1,15 +1,17 @@
 package com.debmeetbanerjee.learnspringframework;
 
 import com.debmeetbanerjee.learnspringframework.game.*;
-import com.debmeetbanerjee.learnspringframework.helloworld.App03Configuration;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App01GamingBasicJava {
     public static void main(String[] args) {
 
-        try (var context = new AnnotationConfigApplicationContext(App03Configuration.class)) {
-            context.getBean(GamingConsole.class).up();
-            context.getBean(GameRunner.class).run();
-        }
+        //var marioGame = new MarioGame();
+        //var superContraGame = new SuperContraGame();
+
+        var game = new PacmanGame();            // Object Creation
+        var gameRunner = new GameRunner(game);  // Object Creation + Wiring of Dependencies
+        // Game is a dependency of GameRunner
+        gameRunner.run();
+
     }
 }
