@@ -33,6 +33,32 @@ Spring Dependency Injection Types \
     - Setter Based : Dependencies are set by calling setter methods on your Beans \
     - Field : No Setter or Constructor. Dependency is injected using Reflection. 
 
+Important Spring Terminologies \
+    - @Component : An Instance of component Class will be managed by Spring Framework \
+    - Dependency : Some classes may need implementation of another to work \
+    - @ComponentScan : helps Spring Framework find other component classes. It Scans packages \
+    - Dependency Injection : Identify beans, their dependencies ans wire them together(provides IOC) \
+    - Spring Beans : an object managed by Spring framework \
+    - IOC container: Manages the lifecycle of beans and dependencies [types : AppContext and BeanFactory] \
+    - Autowiring : The process of wiring in Dependencies for a Spring Bean
+
+@Component vs @Bean \
+    - component can be used on any Java Class while Bean is typically used on methods in Spring configuration classes \
+    - for component we just need to add the annotation, whereas for bean we need to write all the code \
+    - for component we can use constructor, setter or field for autowiring, while for bean we can use method call or method parameter for autowiring \
+    - for component the spring framework creates the beans, while for @bean, the bean creation code is written by developer \
+    - component is recommended for instantiating beans for creating custom applications, @bean is recommended for custom business logic or instantiating beans for 3rd party libraries 
+
+Why Industrial Applications have so many dependencies? \
+    - there are different layers for web, data and business logic \
+    - each layer is dependent on the layer below it \
+    - with spring framework, instead of focussing on objects, their dependencies and wiring, the developer can focus on business logic of the application \
+    - spring framework will take care of the lifecycle of objects, developer can just add the appropriate annotations 
+
+
+
+
+
 
 
 
