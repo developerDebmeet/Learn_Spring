@@ -55,7 +55,19 @@ Why Industrial Applications have so many dependencies? \
     - with spring framework, instead of focussing on objects, their dependencies and wiring, the developer can focus on business logic of the application \
     - spring framework will take care of the lifecycle of objects, developer can just add the appropriate annotations 
 
-Default Initialization of Spring Beans is Eager
+
+Comparing Lazy vs Eager Bean Initialization \
+    - Bean initialization is done when it if fist made use of in the applicaiton
+in lazy, whereas bean is initialized at startup in eager \
+    - Default Initialization of Spring Beans is Eager and Lazy is rarely used \
+    - In Lazy Initialization, errors will result in runtime exceptions whereas
+in eager, errors will prevent application from starting up \
+    - Memory consumption is less in lazy until the bean is initialized \
+    - If there is a very rarely used bean in our app, we can consider lazy init, but other wise eager is fine
+
+
+
+
 
 
 
