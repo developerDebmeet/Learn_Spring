@@ -63,7 +63,18 @@ in lazy, whereas bean is initialized at startup in eager \
     - In Lazy Initialization, errors will result in runtime exceptions whereas
 in eager, errors will prevent application from starting up \
     - Memory consumption is less in lazy until the bean is initialized \
-    - If there is a very rarely used bean in our app, we can consider lazy init, but other wise eager is fine
+    - If there is a very rarely used bean in our app, we can consider lazy init, but otherwise eager is fine
+
+
+Comparing Prototype vs Singleton Bean Scope \
+    - In Prototype Scope, many instance per spring IOC container can be present whereas 
+in Singleton one instance per Spring IOC Container is present \
+    - New bean instance is created every time the bean is referred to in Prototype
+whereas Same bean is reused in Singleton \
+    - Single is Default and is very frequently used \
+    - Prototype is used for Stateful beans whereas Singleton is used for Stateless beans.
+Eg - bean for uses in an app should be different for each, so Prototype can be used.
+
 
 
 
