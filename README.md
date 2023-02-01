@@ -55,6 +55,8 @@ Why Industrial Applications have so many dependencies? \
     - with spring framework, instead of focussing on objects, their dependencies and wiring, the developer can focus on business logic of the application \
     - spring framework will take care of the lifecycle of objects, developer can just add the appropriate annotations 
 
+Default Initialization of Spring Beans is Eager
+
 
 
 
