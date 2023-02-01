@@ -76,6 +76,38 @@ whereas Same bean is reused in Singleton \
 Eg - bean for uses in an app should be different for each, so Prototype can be used.
 
 
+Evolution J2EE -> Java EE -> Jakarta EE \
+    - Enterprise capabilities were initially built into JDK \
+    - With type, they were separated out : \
+        - J2EE : Java 2 Platform Enterprise Edition \
+        - Rebranded to Java Platform Enterprise Edition \
+        - Jakarta EE [Oracle gave Java EE rights to the Eclipse Foundation] \
+            - Important Specifications : \
+                - Jakarta Server Pager (JSP) \
+                - Jakarta Standard Tag Library (JSTL) \
+                - Jakarta Enterprise Beans (EJB) \
+                - Jakarta RESTful Web Services (JAX-RS) \
+                - Jakarta Bean Validation \
+                - Jakarta Contexts and Dependency Injection (CDI) \
+                - Jakarta Persistence API (JPA) \
+                Supported by Spring 6 and Spring Boot 3 [Hence the use of jakarta packages instead of javax packages] \
+
+
+Jakarta Contexts & Dependency Injection (CDI) \
+    - CDI is a specification [interface] and Spring Framework implements CDI \
+    - Important Inject API Annotations \
+        - Inject [~Autowired in Spring] \
+        - Named [~Component in Spring] \
+        - Qualifier \
+        - Scope \
+        - Singleton \
+To use CDI, we need to add a dependency : jakarta.inject
+
+
+
+
+
+
 
 
 
