@@ -104,6 +104,32 @@ Jakarta Contexts & Dependency Injection (CDI) \
 To use CDI, we need to add a dependency : jakarta.inject
 
 
+Java Annotations vs XML Configurations \
+    - Annotations are short and concise and also are defined close to source class/method etc. 
+XML on the other hand is quite large and cumbersome. \
+    - POJO gets polluted with Spring Annotations in case of Annotations and They remain clean with no change in 
+java code in XML configuration \
+    - Annotations are easier to maintain. Annotations are usually getting used in all recent projects. Older projects
+may be using XML \
+    - It is recommended to use either one, but not mix both \
+    - Debugging difficulty is hard for annotations while its medium for XML 
+
+Spring Stereotype Annotations : @Component & more \
+    - @Component - Generic annotation applicable for any class \
+        - It is the Base of all spring Stereotype Annotations \
+        - Specializations of @Component : \
+            - @Service : indicates that an annotated class has business logic \
+            - @Controller : indicates that an annotated class is a "Controller" (eg : a web Controller in web apps/ REST API) \
+            - @Repository : indicates that an annotated class is used to retrieve and/or manipulate data in a database 
+
+
+
+
+
+
+
+
+
 
 
 
