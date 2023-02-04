@@ -1,9 +1,12 @@
 # Learn_Spring
 
+
 https://start.spring.io/ : spring initializr
+
 
 Group ID : Something similar to Package Name \
 Articaft : Something similar to Class Name 
+
 
 What is Spring Container(IOC Container)? IOC : Inversion of Control\
 Spring Container manages Spring Beans and their lifecycle. It makes the runtime system ready for us to use.\
@@ -16,22 +19,27 @@ It is also called Spring Context.\
     - Easy integration with Spring AOP [Aspect Oriented Programming]\
     - Recommended for web apps, web services, REST API and microservices 
 
+
 Java Bean : \
     - Have a public no arg contructor\
     - Allows access to their properties using getter and setter methods\
     - Implements java.io.Serializable
 
+
 POJO : Plain Old Java Object \
     - No Constraints\
     - Any Java Object is a Pojo
 
+
 Spring Bean : Any Java Object that is managed by Spring \
     - Spring uses IOC Container [Bean Factory or Application Context] to manage these objects
+
 
 Spring Dependency Injection Types \
     - Constructor Based : **[RECOMMENDED]** Dependencies are set by creating the Bean using its Constuctor \
     - Setter Based : Dependencies are set by calling setter methods on your Beans \
     - Field : No Setter or Constructor. Dependency is injected using Reflection. 
+
 
 Important Spring Terminologies \
     - @Component : An Instance of component Class will be managed by Spring Framework \
@@ -41,6 +49,7 @@ Important Spring Terminologies \
     - Spring Beans : an object managed by Spring framework \
     - IOC container: Manages the lifecycle of beans and dependencies [types : AppContext and BeanFactory] \
     - Autowiring : The process of wiring in Dependencies for a Spring Bean
+
 
 @Component vs @Bean \
     - component can be used on any Java Class while Bean is typically used on methods in Spring configuration classes \
@@ -114,6 +123,7 @@ may be using XML \
     - It is recommended to use either one, but not mix both \
     - Debugging difficulty is hard for annotations while its medium for XML 
 
+
 Spring Stereotype Annotations : @Component & more \
     - @Component - Generic annotation applicable for any class \
         - It is the Base of all spring Stereotype Annotations \
@@ -125,6 +135,46 @@ Spring Stereotype Annotations : @Component & more \
         - By using a specific annotation, we can give more info to the framework about our intentions \
         - We can use AOP (aspect oriented programming) to add additional behaviour \
             - eg : For @Repository, Spring automatically wires in JDBC Exception translation features \
+
+
+Spring Framework and Modules \
+    - Fundamental Features : in Spring Core module [IOC, Container, Dep Injection, AutoWiring] \
+    - Web Apps/REST API : in Spring MVC module \
+    - Reactive Web App : in Spring WebFlux module \
+    - Data Access : JDBC, JPA etc \
+    - Integration : JMS \
+    - Testing/Mock Objects : Spring MVC Test \
+Why is Spring Framework divided into Modules ? \
+    - Each app can choose modules they want to make use of 
+
+
+Spring Projects : \
+    - Application architectures evolve continuously : \
+        - Web > REST API > Microservices > Cloud > and whatever comes next .... \
+    - Spring has remained relevant through evolution via Spring Projects \
+        - Spring Framework \
+        - Spring Security \
+        - Spring Data \
+        - Spring Integration \
+        - Spring Boot : Popular Framework for building microservices \
+        - Spring Cloud 
+
+
+Hierarchy : Spring Projects > Spring Framework > Spring Modules \
+Why is Spring EcoSystem so popular ? \
+    - Loose Coupling : Spring manages creation and wiring of beans and dependencies \
+        - Makes it easy to build loosely coupled applications
+        - Make writing unit tests easy [Spring Unit Testing] \
+    - Reduced BoilerPlate Code : Focus on business logic \
+        - eg : no need for exception handling in each method \
+            - All checked exceptions are converted to Runtime or unchecked exceptions \
+    - Architectural Flexibility : Spring Modules and Projects \
+        - We can pick and choose which ones to use and no need to use all of them \
+    - Evolution with time : microservices and cloud 
+
+
+
+
 
 
 
