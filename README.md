@@ -120,7 +120,15 @@ Spring Stereotype Annotations : @Component & more \
         - Specializations of @Component : \
             - @Service : indicates that an annotated class has business logic \
             - @Controller : indicates that an annotated class is a "Controller" (eg : a web Controller in web apps/ REST API) \
-            - @Repository : indicates that an annotated class is used to retrieve and/or manipulate data in a database 
+            - @Repository : indicates that an annotated class is used to retrieve and/or manipulate data in a database \
+        - It would be good to use the most specific annotation possible \
+        - By using a specific annotation, we can give more info to the framework about our intentions \
+        - We can use AOP (aspect oriented programming) to add additional behaviour \
+            - eg : For @Repository, Spring automatically wires in JDBC Exception translation features \
+
+
+
+
 
 
 
